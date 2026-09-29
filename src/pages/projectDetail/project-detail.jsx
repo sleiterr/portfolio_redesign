@@ -118,7 +118,7 @@ const ProjectDetail = () => {
                 delay={1200}
                 direction="bottom"
                 className={clsx(
-                  "font-light text-lg md:text-lg text-content",
+                  "font-light text-lg md:text-lg text-secondary",
                   "tracking-wide leading-[1.6]",
                 )}
               >
@@ -128,18 +128,18 @@ const ProjectDetail = () => {
 
             <ul className="relative w-full after:content[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[1px] after:bg-white before:content[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-white flex flex-col gap-2 mb-10">
               <li className=" flex justify-between w-full py-4">
-                <p className="font-light text-lg md:text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-secondary tracking-wide">
                   Year:
                 </p>
-                <p className="font-light text-lg md:text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-secondary tracking-wide">
                   {project.date}
                 </p>
               </li>
               <li className="relative h-full after:content[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[1px] after:bg-white flex justify-between py-4">
-                <p className="font-light text-lg md:text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-secondary tracking-wide">
                   Role:
                 </p>
-                <p className="font-light text-lg md:text-xl text-content tracking-wide  text-right w-[460px] leading-8">
+                <p className="font-light text-lg md:text-xl text-secondary tracking-wide  text-right w-[460px] leading-8">
                   {project.role}
                 </p>
               </li>
@@ -149,7 +149,7 @@ const ProjectDetail = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 font-normal text-lg md:text-xl text-content tracking-wider"
+                className="group relative flex items-center gap-2 font-normal text-lg md:text-xl text-secondary tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
                   Live Page
@@ -165,7 +165,7 @@ const ProjectDetail = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-xl text-content tracking-wider"
+                className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-xl text-secondary tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
                   View GitHub

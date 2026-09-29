@@ -16,7 +16,7 @@ const workFlowData = [
 export const WorkFlow = () => {
   return (
     <div className="">
-      <h4 className="font-light text-content text-base tracking-wider mb-6">
+      <h4 className="font-light text-secondary text-base tracking-wider mb-6">
         Workflow/Backend
       </h4>
       <div className="flex items-center justify-center gap-4">

@@ -10,7 +10,7 @@ const DesignData = [
 export const Design = () => {
   return (
     <div className="absolute">
-      <h4 className="font-light text-content text-base tracking-wider mb-2">
+      <h4 className="font-light text-secondary text-base tracking-wider mb-2">
         UI/UX Tools
       </h4>
       <div className="flex items-center justify-start gap-4 pl-18">

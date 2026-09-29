@@ -9,7 +9,7 @@ const techData = [
 export const Cms = () => {
   return (
     <div>
-      <h4 className="font-light text-content text-base tracking-wider mb-4">
+      <h4 className="font-light text-secondary text-base tracking-wider mb-4">
         CMS & Data Layer
       </h4>
       <div className="flex items-center justify-start gap-4 pl-16">

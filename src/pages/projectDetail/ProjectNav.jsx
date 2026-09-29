@@ -46,8 +46,8 @@ const ProjectNav = () => {
           <li className="relative">
             <Link
               className={clsx(
-                "flex items-center font-light tracking-wider text-content text-2xl md:text-xl gap-2",
-                "before:content-[''] before:absolute before:w-0 before:h-0.5 before:rounded-xs before:bg-white before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                "flex items-center font-light tracking-wider text-secondary text-2xl md:text-xl gap-2",
+                "before:content-[''] before:absolute before:w-0 before:h-0.5 before:rounded-xs before:bg-white before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full",
               )}
               to="/"
             >
@@ -58,8 +58,8 @@ const ProjectNav = () => {
             <button
               onClick={handlePortfolioClick}
               className={clsx(
-                "flex items-center gap-2 font-light tracking-wider text-content text-2xl md:text-xl cursor-pointer",
-                "after:absolute after:content-[''] hover:after:w-full after:h-0.5 after:bg-white after:rounded-xs after:-bottom-[.25rem] after:left-0 after:opacity-0 after:transition-all after:duration-300 hover:after:opacity-100"
+                "flex items-center gap-2 font-light tracking-wider text-secondary text-2xl md:text-xl cursor-pointer",
+                "after:absolute after:content-[''] hover:after:w-full after:h-0.5 after:bg-white after:rounded-xs after:-bottom-[.25rem] after:left-0 after:opacity-0 after:transition-all after:duration-300 hover:after:opacity-100",
               )}
             >
               Portfolio <MdCollections />

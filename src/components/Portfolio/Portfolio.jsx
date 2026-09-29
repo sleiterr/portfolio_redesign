@@ -114,7 +114,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
 
           <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
-          <p className="font-light text-base text-subheading tracking-wider py-4">
+          <p className="font-light text-base text-secondary tracking-wider py-4">
             Education projects.
           </p>
 

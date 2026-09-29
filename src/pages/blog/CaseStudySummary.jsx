@@ -26,10 +26,10 @@ const CaseStudySummary = () => {
               item.lessonsLearned?.map((lesson, index) => (
                 <li key={index} className="flex items-start">
                   <IoIosArrowForward
-                    className="shrink-0 mr-2 text-content"
+                    className="shrink-0 mr-2 text-secondary"
                     size={24}
                   />
-                  <p className="font-normal text-content text-lg">{lesson}</p>
+                  <p className="font-normal text-secondary text-lg">{lesson}</p>
                 </li>
               )),
             )}
@@ -38,7 +38,7 @@ const CaseStudySummary = () => {
         <div className="">
           <h2 className="font-medium text-primary text-2xl pb-4">Conclusion</h2>
           {blogData.map((item) => (
-            <p key={item.id} className="font-normal text-content text-xl">
+            <p key={item.id} className="font-normal text-secondary text-xl">
               {item.conclusion}
             </p>
           ))}
@@ -51,7 +51,7 @@ const CaseStudySummary = () => {
             href={blogData?.[0]?.githubLink?.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-2xl text-content tracking-wider"
+            className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-2xl text-secondary tracking-wider"
           >
             <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
               View Source Code

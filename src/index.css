@@ -20,44 +20,33 @@ body {
 
 html {
   font-family: var(--font-poppins);
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @theme {
   --color-primary: #fff;
+  --color-secondary: #fff;
+  --color-tertiary: #22c3df;
   --color-heading-accent: #22c3df;
 
-  --color-subheading: #fff;
-  --color-content: #fff; /*!content */
+  /** Header */
+  --color-header-bg: #08121d;
+  --color-nav-menu-bg: #08121d;
 
-  --color-number-overlay: #cecece; /*!number-overlay*/
-  --color-caption: #1ed1a8; /*!about-caption*/
+  --color-number-overlay: #cecece;
+  --color-caption: #1ed1a8;
 
-  --color-nav: ; /*!nav-text*/
-  --bg-burger: #3e3e3e; /*! bg-burger*/
-  --color-border: #3e3e3e; /*! pseudo-element for nav element */
+  --bg-burger: #fff;
+  --color-border-default: #22c3df;
+  --color-border-burger: #3e3e3e;
 
   --default-nav: #fff;
 
-  --color-accordion: #fff; /*!accordion-text-desc*/
-  --accordion-text-default: #000; /*!accordion-active*/
+  --color-accordion: #fff;
+  --accordion-text-default: #000;
 
   --accordion-nr-active: #22c3df;
-}
-
-.animate-gradient {
-  animation: gradient 8s linear infinite;
 }
 
 .text-heading-accent {
@@ -66,9 +55,4 @@ html {
 
 .bg-burger {
   background-color: var(--bg-burger);
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }

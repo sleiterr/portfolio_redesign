@@ -1,8 +1,8 @@
 import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero_img.jpg";
 import clsx from "clsx";
-import { ButtHero } from "./ButtHero";
-import { GitLinks } from "./GitLinks";
+// import { ButtHero } from "./ButtHero";
+import { ProjectsLinks } from "./ProjectsLinks";
 import { GradientHeader } from "./GradientHeader";
 import BlurText from "../animation/BlurText";
 import SplitText from "../animation/SplitText";
@@ -12,7 +12,7 @@ const heroTextDoc = [
     id: 1,
     text: "I am a Junior Full Stack Developer & UX/UI Designer, excited to bring my skills to real-world projects while constantly growing as a developer.",
     className:
-      "font-light text-base sm:text-xl md:text-lg text-content leading-[1.5]",
+      "font-light text-base sm:text-xl md:text-lg text-secondary leading-[1.5]",
   },
 ];
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
               <SplitText
                 tag="h1"
                 text="Hi, I'm Oleg."
-                className="font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]"
+                className="font-code font-extrabold text-secondary text-4xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]"
                 delay={100}
                 duration={0.4}
                 ease="power3.out"
@@ -65,7 +65,7 @@ const HeroSection = () => {
               <h2
                 className={clsx(
                   "flex-wrap md:flex items-center gap-1 md:gap-4",
-                  "font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl",
+                  "font-code font-extrabold text-secondary text-4xl sm:text-6xl md:text-6xl",
                 )}
               >
                 I am
@@ -74,12 +74,11 @@ const HeroSection = () => {
             </div>
             {/* Gradient */}
             <HeroItem duration={0.8} delay={0} />
-
-            {/* Btt */}
-            <ButtHero />
+            <div className="">
+              <ProjectsLinks />
+            </div>
           </div>
         </div>
-        <GitLinks />
       </section>
     </>
   );
@@ -89,7 +88,7 @@ export default HeroSection;
 
 const HeroItem = ({ duration }) => {
   return (
-    <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem]">
+    <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem] mb-8">
       {heroTextDoc.map((p) => (
         <BlurText as="p" duration={duration} key={p.id} className={p.className}>
           {p.text}

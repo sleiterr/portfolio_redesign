@@ -12,7 +12,7 @@ const techStack = [
 export const FrontEnd = () => {
   return (
     <div>
-      <h4 className="font-light text-content text-base tracking-wider mb-4">
+      <h4 className="font-light text-secondary text-base tracking-wider mb-4">
         Frontend Stack
       </h4>
       <div className="flex items-center justify-start gap-4 pl-8">

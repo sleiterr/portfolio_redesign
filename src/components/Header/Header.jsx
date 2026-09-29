@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,8 @@ import { whiteLogo, blackLogo } from "../../assets/logo/index";
 import { GoCommandPalette } from "react-icons/go";
 
 import clsx from "clsx";
+
+import { DownloadCta } from "../Button/DownloadCta";
 import BurgerMenu from "./BurgerMenu";
 import NavMenu from "./NavMenu";
 
@@ -66,11 +68,11 @@ const Header = () => {
   let navBarClasses;
 
   if (isProjectDetail) {
-    navBarClasses = `${defaultClasses}  bg-white/90 backdrop-blur-sm`;
+    navBarClasses = `${defaultClasses} bg-header-bg/95 backdrop-blur-md border-b border-white/10`;
   } else if (scrolled || !isHome) {
-    navBarClasses = `${defaultClasses}  bg-white/90 backdrop-blur-sm`;
+    navBarClasses = `${defaultClasses} bg-header-bg/95 backdrop-blur-md border-b border-white/10`;
   } else {
-    navBarClasses = `${defaultClasses}  bg-transparent`;
+    navBarClasses = `${defaultClasses}  bg-transparent border-none`;
   }
 
   return (
@@ -94,36 +96,36 @@ const Header = () => {
           // Close menu when overlay is clicked
           onClick={() => setMenuOpen(false)}
         ></div>
-        <nav
-          className={clsx(navBarClasses)}
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        >
+        <nav className={clsx(navBarClasses)}>
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
             <Link to="/">
               {!scrolled ? (
                 <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (
-                <img src={blackLogo} alt="logo" className="w-[8rem] h-auto" />
+                <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
+                // <img src={blackLogo} alt="logo" className="w-[8rem] h-auto" />
               )}
             </Link>
-
-            <span
-              className="absolute top-[15%] right-[-22px] h-[70%] w-[1px]"
-              style={{
-                backgroundColor: scrolled
-                  ? "rgba(62, 62, 62,0.60)"
-                  : "rgba(255, 255, 255,0.2)",
-              }}
-            ></span>
           </div>
+          <div className="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none">
+            <div className="pointer-events-auto">
+              <NavMenu
+                handleLinkClick={handleLinkClick}
+                variant="desktop"
+                scrolled={scrolled}
+              />
+            </div>
+          </div>
+          <DownloadCta />
         </nav>
+        {/* Mobile Menu Overlay and Slide-in Panel */}
         <div
           className={clsx(
             "fixed top-0 bottom-0 right-0 z-[1000]",
-            "w-full h-auto md:w-lg lg:w-3/6 md:h-full",
-            "bg-white/90 backdrop-blur-sm",
             "flex flex-col justify-start items-start",
             "pt-4 px-4 md:pt-8 md:px-8 gap-10",
+            "w-full h-auto md:w-lg lg:w-3/6 md:h-full",
+            "bg-nav-menu-bg backdrop-blur-sm border-l border-white/20",
             "transition-all duration-600 ease-out transform",
             {
               "opacity-0 translate-x-full pointer-events-none": !menuOpen,
@@ -134,23 +136,23 @@ const Header = () => {
         >
           <div className="">
             <img
-              src={blackLogo}
+              src={whiteLogo}
               alt="logo"
               className="w-[8rem] md:w-[10rem] h-auto"
             />
           </div>
 
+          {/* Mobile NavMenu */}
           <nav className="self-center m-auto">
-            {/* NavMenuList */}
-            <NavMenu handleLinkClick={handleLinkClick} />
+            <NavMenu handleLinkClick={handleLinkClick} variant="mobile" />
           </nav>
-          <div className="flex items-center gap-4 font-normal text-xl text-nav tracking-wider mb-8 md:mb-4">
+          <div className="flex items-center gap-4 font-normal text-xl text-secondary tracking-wider mb-8 md:mb-4">
             <GoCommandPalette className="w-10 h-10" />
             junior developer
           </div>
         </div>
       </header>
-      <div className="fixed z-[1000] right-[30px] top-[1.2rem] md:top-[32px]">
+      <div className="fixed z-[1000] right-[30px] top-[1.2rem] md:top-[32px] lg:hidden">
         <BurgerMenu
           scrolled={scrolled}
           isOpen={menuOpen}

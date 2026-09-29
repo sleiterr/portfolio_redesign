@@ -68,7 +68,7 @@ const AboutItms = ({ children, duration = 1, delay }) => {
           duration={duration}
           delay={delay}
           className={clsx(
-            "font-light text-content text-base leading-[1.6] tracking-normal",
+            "font-light text-secondary text-base leading-[1.6] tracking-normal",
             "sm:text-lg sm:leading-[1.65]",
             "md:text-lg md:leading-[1.65] md:tracking-[0.02em]",
             "lg:text-lg lg:leading-[1.4]",

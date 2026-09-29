@@ -1,88 +1,60 @@
-import React from "react";
-// import { Link } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
 
-const NavMenu = ({ handleLinkClick }) => {
+// Navigation links for the header menu
+const NAV_LINKS = [
+  { to: "/#hero", label: "Home" },
+  { to: "/#about", label: "About" },
+  { to: "/#skills", label: "Skills" },
+  { to: "/#portfolio", label: "Portfolio" },
+  { to: "/#experience", label: "Experience" },
+  { to: "/blog", label: "Blog", hidenOn: "/blog" },
+];
+
+const NavMenu = ({
+  handleLinkClick,
+  variant = "desktop",
+  scrolled = false,
+}) => {
   const location = useLocation();
   const isBlogPage = location.pathname === "/blog";
+  // Determine if the current variant is desktop or mobile
+  const isDesktop = variant === "desktop";
+
+  // Define classes for the unordered list based on the variant (desktop or mobile)
+  const ulClasses = clsx(
+    "gap-6",
+    isDesktop
+      ? "hidden lg:flex flex-row items-center justify-center gap-x-8"
+      : "flex flex-col items-start",
+  );
+
+  // Define base classes for the links
+  const linkBase =
+    "font-light text-secondary relative before:content-[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border-default before:bottom-[-.25rem] before:left-0 before:transition-all cursor-pointer before:duration-300 hover:before:w-full";
+
+  // Define text size based on the variant (desktop or mobile)
+  const textSize = isDesktop ? "text-base xl:text-lg" : "text-3xl";
+  const textColor = !isDesktop
+    ? "text-nav"
+    : scrolled
+      ? "text-white"
+      : "text-white";
 
   return (
-    <ul className="flex flex-col items-start gap-6">
-      <li>
-        <Link
-          to="/#hero"
-          className={clsx(
-            "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
-            "cursor-pointer before:duration-300 hover:before:w-full",
-          )}
-          onClick={handleLinkClick}
-        >
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/#about"
-          className={clsx(
-            "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
-            "cursor-pointer before:duration-300 hover:before:w-full",
-          )}
-          onClick={handleLinkClick}
-        >
-          About
-        </Link>
-      </li>
-      <li className="hidden md:block">
-        <Link
-          to="/#skills"
-          className={clsx(
-            "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
-            "cursor-pointer before:duration-300 hover:before:w-full",
-          )}
-          onClick={handleLinkClick}
-        >
-          Skills
-        </Link>
-      </li>
-      <li className="hidden md:block">
-        <Link
-          to="/#portfolio"
-          className={clsx(
-            "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
-            "cursor-pointer before:duration-300 hover:before:w-full",
-          )}
-          onClick={handleLinkClick}
-        >
-          Portfolio
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/#experience"
-          className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-black before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
-          onClick={handleLinkClick}
-        >
-          Experience
-        </Link>
-      </li>
-      {!isBlogPage && (
-        <li>
-          <Link
-            to="/blog"
-            className={clsx(
-              "relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-black before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full",
-              "hidden lg:block",
-            )}
-            onClick={handleLinkClick}
-          >
-            Blog
-          </Link>
-        </li>
+    <ul className={ulClasses}>
+      {NAV_LINKS.filter((link) => link.hidenOn !== location.pathname).map(
+        (link) => (
+          <li key={link.to}>
+            <Link
+              to={link.to}
+              className={clsx(linkBase, textSize, textColor)}
+              onClick={handleLinkClick}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ),
       )}
     </ul>
   );
