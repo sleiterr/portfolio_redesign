@@ -1,11 +1,14 @@
-import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero_img.jpg";
 import clsx from "clsx";
-// import { ButtHero } from "./ButtHero";
 import { ProjectsLinks } from "./ProjectsLinks";
+import CtaLinkButton from "../Button/CtaLinkButton";
+
 import { GradientHeader } from "./GradientHeader";
 import BlurText from "../animation/BlurText";
 import SplitText from "../animation/SplitText";
+import { GradientLabel } from "../animation/GradientLabel";
+
+import { FiGithub } from "react-icons/fi";
 
 const heroTextDoc = [
   {
@@ -31,20 +34,30 @@ const HeroSection = () => {
         id="hero"
         style={{
           backgroundImage: `url(${heroBg})`,
-          // backgroundPosition: "center center",
-          // aspectRatio: "8 / 5",
         }}
       >
+        {/* Gradient overlays */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#08121d] via-[#08121d]/80 to-[#08121d]/30"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08121d] via-transparent to-transparent"
+        />
         <div
           className={clsx(
-            "absolute translate-y-1/2 flex items-start justify-center",
+            "absolute z-10 flex items-start justify-center",
             "top-[6rem] left-6",
-            "lg:left-10 lg:bottom-60",
-            "md:top-1/6 md:left-12",
             "sm:top-4 sm:left-12",
+            "md:top-1/6 md:left-12",
+            "lg:top-1/3 lg:left-10",
           )}
         >
-          <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
+          <div className="flex flex-col items-start justify-center text-left gap-4 px-4 md:px-0">
+            <GradientLabel className="uppercase text-sm!">
+              junior developer
+            </GradientLabel>
             <div className="mb-4 w-full">
               <SplitText
                 tag="h1"
@@ -74,8 +87,21 @@ const HeroSection = () => {
             </div>
             {/* Gradient */}
             <HeroItem duration={0.8} delay={0} />
-            <div className="">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <ProjectsLinks />
+              <CtaLinkButton
+                href="#"
+                className={clsx(
+                  "flex items-center gap-2",
+                  "border border-white/25 text-white",
+                  "font-['Poppins',sans-serif] font-medium",
+                  "hover:border-[#22c3df] hover:text-[#22c3df]",
+                  "text-sm sm:text-base",
+                )}
+              >
+                <FiGithub className="w-4 h-4" />
+                View GitHub
+              </CtaLinkButton>
             </div>
           </div>
         </div>

@@ -1,6 +1,3 @@
-import { section } from "framer-motion/client";
-import React from "react";
-
 const Section = ({ children, className = "", style = {}, id }) => {
   return (
     <section style={style} id={id}>
