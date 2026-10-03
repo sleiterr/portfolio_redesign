@@ -2,9 +2,24 @@ import React from "react";
 import { figma, ph, ai } from "../../assets/iconExports/index";
 
 const DesignData = [
-  { src: figma, alt: "figma", className: "size-12" },
-  { src: ph, alt: "ph", className: "size-12" },
-  { src: ai, alt: "ai", className: "size-12" },
+  {
+    src: figma,
+    alt: "figma",
+    className: "size-12",
+    href: "https://www.figma.com",
+  },
+  {
+    src: ph,
+    alt: "ph",
+    className: "size-12",
+    href: "https://www.figma.com/community",
+  },
+  {
+    src: ai,
+    alt: "ai",
+    className: "size-12",
+    href: "https://www.adobe.com/products/illustrator.html",
+  },
 ];
 
 export const Design = () => {
@@ -15,7 +30,14 @@ export const Design = () => {
       </h4>
       <div className="flex items-center justify-start gap-4 pl-18">
         {DesignData.map((d, index) => (
-          <img key={index} src={d.src} alt={d.alt} className={d.className} />
+          <a
+            href={d.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+          >
+            <img key={index} src={d.src} alt={d.alt} className={d.className} />
+          </a>
         ))}
       </div>
     </div>

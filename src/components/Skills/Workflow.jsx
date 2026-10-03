@@ -7,10 +7,30 @@ import {
 } from "../../assets/iconExports/index";
 
 const workFlowData = [
-  { src: mongodb, alt: "MongoDB", className: "w-[6rem] h-auto" },
-  { src: postman, alt: "Postman", className: "size-12" },
-  { src: gitHub, alt: "GitHub", className: "size-12" },
-  { src: vercel, alt: "vercel", className: "w-[7rem] h-auto" },
+  {
+    src: mongodb,
+    alt: "MongoDB",
+    className: "w-[6rem] h-auto",
+    href: "https://www.mongodb.com",
+  },
+  {
+    src: postman,
+    alt: "Postman",
+    className: "size-12",
+    href: "https://www.postman.com",
+  },
+  {
+    src: gitHub,
+    alt: "GitHub",
+    className: "size-12",
+    href: "https://github.com",
+  },
+  {
+    src: vercel,
+    alt: "vercel",
+    className: "w-[7rem] h-auto",
+    href: "https://vercel.com",
+  },
 ];
 
 export const WorkFlow = () => {
@@ -21,12 +41,19 @@ export const WorkFlow = () => {
       </h4>
       <div className="flex items-center justify-center gap-4">
         {workFlowData.map((flow, index) => (
-          <img
+          <a
+            href={flow.href}
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
-            src={flow.src}
-            alt={flow.alt}
-            className={flow.className}
-          />
+          >
+            <img
+              key={index}
+              src={flow.src}
+              alt={flow.alt}
+              className={flow.className}
+            />
+          </a>
         ))}
       </div>
     </div>

@@ -1,9 +1,7 @@
 .bg-about-gradient {
-  background-image: radial-gradient(
-    100% 100% at 50% 100%,
-    #4a5568 0%,
-    #08121d 80%
-  );
+  background-image: radial-gradient(100% 100% at 50% 100%,
+      #4a5568 0%,
+      #08121d 80%);
 }
 
 .bg-skills {
@@ -11,29 +9,40 @@
 }
 
 .bg-projects-gradient {
-  background-image: radial-gradient(
-    100% 100% at 50% 100%,
-    #4a5568 0%,
-    #08121d 90%
-  );
+  background-image: radial-gradient(100% 100% at 50% 100%,
+      #4a5568 0%,
+      #08121d 90%);
 }
 
 .bg-preview-gradient {
-  background-image: radial-gradient(
-    100% 100% at 50% 100%,
-    #4a5568 0%,
-    #08121d 80%
-  );
+  background-image: radial-gradient(100% 100% at 50% 100%,
+      #4a5568 0%,
+      #08121d 80%);
 }
 
 .bg-experiance-gradient {
-  background-image: radial-gradient(
-    100% 100% at 49.41% 100%,
-    #4a5568 0%,
-    #08121d 80%
-  );
+  background-image: radial-gradient(100% 100% at 49.41% 100%,
+      #4a5568 0%,
+      #08121d 80%);
+}
+
+.bg-section {
+  background-color: #08121d;
+}
+
+.bg-portfolio-transition {
+  background: linear-gradient(to bottom,
+      transparent 0,
+      #08121d 12rem,
+      #08121d calc(100% - 12rem),
+      transparent 100%);
 }
 
 .bg-footer {
   background-color: rgba(23, 32, 47, 1);
+  background-image:
+    linear-gradient(to bottom, transparent 0, rgba(23, 32, 47, 1) 12rem),
+    radial-gradient(100% 12rem at 50% 0%, #4a5568 0%, #08121d 90%);
+  background-repeat: no-repeat;
+  background-size: 100% 12rem;
 }

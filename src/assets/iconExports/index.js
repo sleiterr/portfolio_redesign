@@ -14,6 +14,8 @@ import postman from "../icon_skills/postman.svg";
 import figma from "../icon_skills/Figma.svg";
 import ph from "../icon_skills/Ph.svg";
 import ai from "../icon_skills/Adobe_Illustrator.svg";
+import ts from "../icon_skills/ts.svg";
+import nextjs from "../icon_skills/Next_js.svg";
 
 export {
   react,
@@ -30,4 +32,6 @@ export {
   figma,
   ph,
   ai,
+  ts,
+  nextjs,
 };

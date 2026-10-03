@@ -13,7 +13,7 @@ function About() {
   const handleAnimationComplete = () => {};
 
   return (
-    <Section id="about" className="py-16 md:py-28 bg-[#08121d] md:max-w-none!">
+    <Section id="about" className="py-16 md:py-28 bg-section md:max-w-none!">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 relative">
         <GradientLabel className="lg:text-base! tracking-wide! mb-3 uppercase">
           About me

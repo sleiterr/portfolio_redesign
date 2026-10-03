@@ -10,11 +10,15 @@ import LogoLink from "./LogoLink";
 const Footer = () => {
   return (
     //  border-t border-white
-    <footer className="flex flex-col items-center justify-center bg-footer">
+    <footer
+      className={clsx(
+        "flex flex-col items-center justify-center bg-footer py-6 px-8 md:py-0  lg:pt-20 lg:pb-6",
+      )}
+    >
       <div
         className={clsx(
-          "flex items-start flex-col gap-8 justify-between w-full py-6 px-8  lg:py-8",
-          "md:gap-0 md:flex-row md:items-center md:py-8",
+          "flex items-start flex-col gap-8 justify-between w-full",
+          "md:gap-0 md:flex-row md:items-center md:mb-4",
         )}
       >
         <div className="">

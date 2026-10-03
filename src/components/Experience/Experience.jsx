@@ -11,8 +11,7 @@ import { fetchExperienceData } from "../../utils/api";
 import clsx from "clsx";
 import SplitText from "../animation/SplitText";
 
-const handleAnimationComplete = () => {
-};
+const handleAnimationComplete = () => {};
 
 const Experience = () => {
   const [educationPosts, setEducationPosts] = useState([]);

@@ -1,10 +1,10 @@
-import React from "react";
 import { FrontEnd } from "./FrontEnd";
 import { Cms } from "./Cms";
 import { WorkFlow } from "./Workflow";
 import { Design } from "./Design";
 import SplitText from "../animation/SplitText";
 import clsx from "clsx";
+import { GradientLabel } from "../animation/GradientLabel";
 
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
@@ -12,12 +12,18 @@ const handleAnimationComplete = () => {
 
 const Skills = () => {
   return (
-    <section className="hidden lg:block" id="skills">
+    <section
+      className="relative hidden lg:block before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-32 before:bg-gradient-to-b before:from-[#08121d] before:to-transparent before:content-['']"
+      id="skills"
+    >
       <div className="py-[8rem] lg:px-4 mx-auto md:max-w-7xl">
+        <GradientLabel className="lg:text-base! tracking-wide! mb-3 uppercase">
+          My Skills
+        </GradientLabel>
         <SplitText
           tag="h2"
-          text="Skills"
-          className="font-code font-bold text-6xl text-primary mb-15 w-full leading-[1.2]"
+          text="Tech Stack"
+          className="font-code font-bold text-4xl text-primary mb-15 w-full leading-[1.2]"
           delay={100}
           duration={0.4}
           ease="power3.out"
@@ -26,7 +32,7 @@ const Skills = () => {
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
           rootMargin="-100px"
-          textAlign="right"
+          textAlign="left"
           onLetterAnimationComplete={handleAnimationComplete}
         />
 
@@ -34,7 +40,7 @@ const Skills = () => {
           {/* Frontend Stack */}
           <div
             className={clsx(
-              "absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto",
+              "absolute translate-x-1/2 px-4 pt-4 pb-16 w-[34rem] h-auto",
               "rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500",
             )}
           >

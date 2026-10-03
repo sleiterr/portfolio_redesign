@@ -21,10 +21,7 @@ const Home = () => {
   return (
     <>
       <HeroSection heroRef={heroRef} />
-      <div
-        className="block lg:hidden"
-        style={{ height: "100px", position: "relative", overflow: "hidden" }}
-      >
+      <div className="relative block h-[100px] overflow-hidden lg:hidden before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-8 before:bg-gradient-to-b before:from-[#08121d] before:to-transparent before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:h-10 after:bg-gradient-to-b after:from-transparent after:to-[#08121d] after:content-['']">
         <Skillslop
           logos={techLogos}
           speed={40}

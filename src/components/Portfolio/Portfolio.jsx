@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion as Motion } from "motion/react";
 import FilterCard from "./FilterCard";
 import SplitText from "../animation/SplitText";
+import { GradientLabel } from "../animation/GradientLabel";
+import Section from "../Section/Section";
 
 import { containerVariants, cardVariants } from "../animation/Portfolio.js";
 
@@ -90,14 +92,20 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
   }
 
   return (
-    <section className="hidden md:block" id="portfolio">
-      <div className="px-4 md:px-4 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
+    <Section
+      id="portfolio"
+      className="hidden md:block bg-portfolio-transition md:max-w-none! py-0!"
+    >
+      <div className="px-4 py-[3.7rem] md:py-[12rem] mx-auto md:max-w-7xl">
         <div className="relative md:mb-12 lg:mb-6">
+          <GradientLabel className="lg:text-base! tracking-wide! mb-3 uppercase">
+            My Projects
+          </GradientLabel>
           <SplitText
             tag="h2"
-            text="Projects"
+            text="Selected Work"
             className={clsx(
-              "font-code font-bold text-4xl md:text-6xl text-primary leading-[1.2]",
+              "font-code font-bold text-2xl md:text-3xl text-primary",
               "mb-4 md:mb-6",
             )}
             delay={100}
@@ -111,14 +119,6 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             textAlign="right"
             onLetterAnimationComplete={handleAnimationComplete}
           />
-
-          <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
-
-          <p className="font-light text-base text-secondary tracking-wider py-4">
-            Education projects.
-          </p>
-
-          <div className="absolute left-0 bottom-0 after:content-[''] after:w-30 after:h-px after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
         </div>
         <div
           className={clsx(
@@ -207,7 +207,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
