@@ -2,7 +2,7 @@
   "experienceData": [
     {
       "id": 1,
-      "title": "My internship",
+      "title": "Front-end Intern",
       "year": "Duration: 6 weeks",
       "subtitle": "Front-end internship at Superego Holstebro, working in a real production environment with modern web technologies and team collaboration.",
       "list": [
@@ -11,20 +11,26 @@
         "Applied Tailwind CSS for responsive UI development",
         "Participated in real client-based projects",
         "Collaborated in a professional development team environment",
-        "Gained first experience with modern UI/UX workflows"
+        "Gained first experience with modern UI/UX workflows",
+        {
+          "label": "View project",
+          "href": "https://github.com/sleiterr/klog-energi"
+        }
       ]
     },
     {
       "id": 2,
       "title": "GoIT IT school",
-      "projectName": "Organic Vegetables",
-      "projectUrl": "https://escape23.github.io/ovochi-group/",
       "subtitle": "Was my first team project organic vegetables where I gained experience working in a team using GitHub and GitBash. During this project, I developed my first soft skills, which gave me a better understanding of teamwork and working with a global repository.",
       "list": [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         "Repellat hic omnis expedita consectetur esse minus soluta earum,",
         "velit eius illo quia molestiae atque natus, laudantium numquam",
-        "velit eius illo quia molestiae atque natus, laudantium numquam"
+        "velit eius illo quia molestiae atque natus, laudantium numquam",
+        {
+          "label": "Organic Vegetables",
+          "href": "https://escape23.github.io/ovochi-group/"
+        }
       ]
     }
   ]
