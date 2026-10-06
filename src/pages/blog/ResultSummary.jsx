@@ -1,4 +1,3 @@
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import BlogCard from "./BlogCard";
 import { useBlog } from "./useBlog";
@@ -8,8 +7,7 @@ const ResultSummary = () => {
 
   if (loading) return null;
 
-  if (error)
-    return <p className="font-normal text-2xl text-red-500">{error}</p>;
+  if (error) return <p className="font-normal text-xl text-red-500">{error}</p>;
 
   return (
     <div className="grid grid-cols-2 gap-2 mt-28 w-2/3 items-center">

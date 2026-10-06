@@ -16,6 +16,16 @@ const fetchEducationData = async () => {
 
 export { fetchEducationData };
 
+// Fetch Featured Post Data
+const fetchFeaturedPostData = async () => {
+  const res = await fetch("/data/featuredPost.json");
+  if (!res.ok) throw new Error("Error fetching Post Data");
+  const data = await res.json();
+  return data.dataPost || [];
+};
+
+export { fetchFeaturedPostData };
+
 const fetchBlogData = async () => {
   const res = await fetch("/data/blogData.json");
   if (!res.ok) throw new Error("Error fetching Blog Data");

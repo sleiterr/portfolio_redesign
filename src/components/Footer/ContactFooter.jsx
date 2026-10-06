@@ -7,16 +7,16 @@ const contactData = [
     id: 1,
     href: "mailto:sleite4r@gmail.com",
     text: "oleg4troian@ gmail.com",
-    clasName: "footer-link font-light text-lg tracking-wide text-secondary",
-    icon: <AiOutlineMail className="text-white w-6 h-6" />,
+    clasName: "font-light text-sm tracking-wider text-secondary",
+    icon: <AiOutlineMail className="text-white w-4 h-4" />,
     className: "footer-item flex items-center gap-2",
   },
   {
     id: 2,
     href: "tel:+45 53 77 01 76",
     text: "+45 53 77 01 76",
-    clasName: "footer-link font-light text-lg tracking-wide text-secondary",
-    icon: <BsTelephone className="text-white w-6 h-6" />,
+    clasName: "font-light text-sm tracking-wider text-secondary",
+    icon: <BsTelephone className="text-white w-4 h-4" />,
     className: "footer-item flex items-center justify-center gap-2",
   },
 ];
@@ -29,10 +29,7 @@ export const ContactFooter = () => {
         .map((item) => (
           <li key={item.id} className={item.className}>
             {item.icon}
-            <a
-              href={item.href}
-              className="footer-link font-light text-lg tracking-wide text-secondary"
-            >
+            <a href={item.href} className={item.clasName}>
               {item.text}
             </a>
           </li>

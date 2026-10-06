@@ -5,6 +5,8 @@ import Skills from "../../components/Skills/Skills";
 import Experience from "../../components/Experience/Experience";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Skillslop from "../../components/Skillslop/SkillTicker";
+import FeaturedPost from "../../components/FeaturedPost/FeaturedPost";
+
 import { techLogos } from "../../utils/techLogos";
 // import {
 //   SiReact,
@@ -39,6 +41,7 @@ const Home = () => {
       <About />
       <Skills />
       <Portfolio currentPage={currentPage} setCurrentpage={setCurrentpage} />
+      <FeaturedPost />
       <Experience />
     </>
   );

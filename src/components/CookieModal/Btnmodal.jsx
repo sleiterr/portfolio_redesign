@@ -23,8 +23,3 @@ const BtnModal = ({ children, className, ...rest }) => {
 };
 
 export default BtnModal;
-
-// focus:ring-blue-300 for lighter blue ring on focus
-// focus:ring-opacity-75 for more visible ring on focus
-// focus:ring-2 for thicker ring on focus
-// hover:bg-blue-600 for darker blue on hover

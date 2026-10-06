@@ -24,7 +24,7 @@ const LogoLink = ({ scrollTarget = "hero" }) => {
         src={logo}
         alt="logo"
         onClick={handleClick}
-        className="w-40 h-full cursor-pointer"
+        className="w-[105px] h-[37px] cursor-pointer"
       />
     </>
   );

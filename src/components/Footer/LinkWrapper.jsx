@@ -8,25 +8,19 @@ const wrapperData = [
     id: 1,
     href: "https://github.com/sleiterr",
     className: "icon icon-github",
-    icon: (
-      <FaGithub className="w-[32px] h-[32px] md:w-[40px] md:h-[40px]text-white" />
-    ),
+    icon: <FaGithub className="h-5 w-5 text-white" />,
   },
   {
     id: 2,
     href: "https://www.linkedin.com/in/oleg-troian-031922250/",
     className: "icon icon-in",
-    icon: (
-      <FaLinkedin className="w-[32px] h-[32px] md:w-[40px] md:h-[40px]text-white" />
-    ),
+    icon: <FaLinkedin className="h-5 w-5 text-white" />,
   },
   {
     id: 3,
     href: "https://www.upwork.com/freelancers/~01ad4dfb96e6282764?mp_source=share",
     className: "icon icon-upwork",
-    icon: (
-      <FaSquareUpwork className="w-[32px] h-[32px] md:w-[40px] md:h-[40px]text-white" />
-    ),
+    icon: <FaSquareUpwork className="h-5 w-5 text-white" />,
   },
 ];
 
@@ -59,10 +53,10 @@ const StyledWrapper = styled.div`
 
   .icon {
     display: inline-flex;
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     text-decoration: none;
-    outline: 2px solid white;
+    outline: 1px solid white;
     border-radius: 50%;
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: 0.25s;
@@ -75,7 +69,8 @@ const StyledWrapper = styled.div`
 
   .icon svg {
     margin: auto;
-    width: 31px;
+    width: 20px;
+    height: 20px;
   }
 
   .icon-github:hover {

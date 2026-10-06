@@ -1,13 +1,15 @@
 // Portfolio.jsx
-import React, { useState, useEffect } from "react"; // Adjust the path as necessary
-import clsx from "clsx";
-import Pagination from "../Pagination/Pagination";
+import { useState, useEffect } from "react"; // Adjust the path as necessary
 import { Link } from "react-router-dom";
+
+import clsx from "clsx";
 import { AnimatePresence, motion as Motion } from "motion/react";
-import FilterCard from "./FilterCard";
 import SplitText from "../animation/SplitText";
 import { GradientLabel } from "../animation/GradientLabel";
+
 import Section from "../Section/Section";
+import FilterCard from "./FilterCard";
+import Pagination from "../Pagination/Pagination";
 
 import { containerVariants, cardVariants } from "../animation/Portfolio.js";
 

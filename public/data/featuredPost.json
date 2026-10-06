@@ -1,0 +1,19 @@
+{
+  "dataPost": [
+    {
+      "id": 1,
+      "title": "Weather App",
+      "subtitle": "Expo + React Native",
+      "eyebrow": "01 / My First Mobile Project",
+      "coverImage": "/blogImage/Home.gif",
+      "description": "A mobile weather app with current conditions, an hourly forecast, and a 7-day forecast with expandable details — built with Expo Router. My goal wasn't just a clean UI, but the full cycle: API integration, state management, and handling incomplete data.",
+      "highlight": "During testing I found a subtle API/UI mismatch — the UI always expected 7 forecast days, but the API sometimes returned fewer. I traced the root cause, refactored the rendering logic, and made the forecast title dynamic based on real data.",
+      "techStack": ["Expo", "React Native", "Expo Router", "WeatherAPI"],
+      "githubLink": {
+        "label": "View Source Code",
+        "url": "https://github.com/sleiterr/Weather_App"
+      },
+      "liveDemo": null
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import { useBlog } from "./useBlog";
 import { IoIosArrowForward } from "react-icons/io";
 import BlogCard from "./BlogCard";
