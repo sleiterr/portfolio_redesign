@@ -3,11 +3,11 @@ import SplitText from "../animation/SplitText";
 import AboutItems from "./AboutItems";
 import Section from "../Section/Section";
 
-const STATS = [
-  { value: "93", label: "Projects" },
-  { value: "6mo", label: "Internship" },
-  { value: "2+", label: "Years Study" },
-];
+// const STATS = [
+//   { value: "93", label: "Projects" },
+//   { value: "6mo", label: "Internship" },
+//   { value: "2+", label: "Years Study" },
+// ];
 
 function About() {
   const handleAnimationComplete = () => {};
@@ -64,7 +64,7 @@ function About() {
             </AboutItems>
 
             {/* Stats cards */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-6">
+            {/* <div className="grid grid-cols-3 gap-3 sm:gap-6">
               {STATS.map(({ value, label }) => (
                 <div
                   key={label}
@@ -78,7 +78,7 @@ function About() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
