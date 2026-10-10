@@ -6,9 +6,30 @@
       "subtitle": "Expo + React Native",
       "eyebrow": "01 / My First Mobile Project",
       "coverImage": "/blogImage/Home.gif",
-      "description": "A mobile weather app with current conditions, an hourly forecast, and a 7-day forecast with expandable details — built with Expo Router. My goal wasn't just a clean UI, but the full cycle: API integration, state management, and handling incomplete data.",
-      "highlight": "During testing I found a subtle API/UI mismatch — the UI always expected 7 forecast days, but the API sometimes returned fewer. I traced the root cause, refactored the rendering logic, and made the forecast title dynamic based on real data.",
-      "techStack": ["Expo", "React Native", "Expo Router", "WeatherAPI"],
+      "description": "A mobile weather application that brings current conditions, a 6-hour hourly forecast, and a 7-day outlook into a clean, intuitive interface. Built with React Native and Expo Router, the project focuses on more than visual design — combining real-time API integration, reusable components, and reliable data handling to create a consistent user experience.",
+      "highlight": "One of the most interesting challenges emerged while handling forecast data. The interface initially assumed that the API would always return seven forecast days, which led to empty entries when fewer days were available. I traced the issue to the mismatch between the expected and actual response, refactored the rendering logic to use the available data, and made the forecast heading adapt dynamically to the number of returned days.",
+      "techStack": [
+        "Expo",
+        "React Native",
+        "Expo Router",
+        "WeatherAPI",
+        "JavaScript",
+        "Ionicons"
+      ],
+      "images": [
+        {
+          "src": "/blogImage/Forecast.gif",
+          "alt": "Forecast list with upcoming days",
+          "caption": "Forecast screen",
+          "variant": "back"
+        },
+        {
+          "src": "/blogImage/Home.gif",
+          "alt": "Home screen weather overview",
+          "caption": "Main screen",
+          "variant": "front"
+        }
+      ],
       "githubLink": {
         "label": "View Source Code",
         "url": "https://github.com/sleiterr/Weather_App"

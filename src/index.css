@@ -28,6 +28,8 @@ html {
   --color-primary: #fff;
   --color-secondary: #fff;
   --color-tertiary: #22c3df;
+  --color-quaternary: rgb(255 255 255 / 0.65);
+  --color-quinary: rgb(30 209 168 / 0.6);
   --color-heading-accent: #22c3df;
 
   /** Header */
