@@ -25,8 +25,8 @@ const CtaLinkButton = ({
         {...rest}
         className={clsx(
           "relative z-10 block",
-          "py-4 px-8 cursor-pointer rounded-xl",
-          "font-semibold text-quaternary text-base md:text-lg",
+          "px-5 py-3 rounded-md! cursor-pointer",
+          "font-medium text-quaternary text-base md:text-lg",
           "transition duration-300 ease-in-out",
           className,
         )}

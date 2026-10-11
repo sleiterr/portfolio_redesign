@@ -2,123 +2,52 @@
   "projects": [
     {
       "id": 1,
-      "title": "Le gout infini.",
-      "caption": "Osteria Francescana in Modena.",
-      "url": "https://sleiterr.github.io/md-11-html-Le-go-t-infini/",
-      "github": "https://github.com/sleiterr/md-11-html-Le-go-t-infini",
-      "role": "UI/UX & Front-end — student project",
-      "category": "html",
-      "date": "17-11-2024",
-      "image": ["/imgProjects/Le_gout_infini.jpg"],
-      "preview": ["/imgProjects/Le_gout_infini-preview.jpg"]
-    },
-    {
-      "id": 2,
-      "title": "Italian Cuisine.",
-      "caption": "Italian cuisine is more than just food; it's art, tradition, and love.",
-      "url": "https://sleiterr.github.io/delizi-oso/",
-      "github": "https://github.com/sleiterr/delizi-oso",
-      "role": "solo front-end practice",
-      "date": "06-01-2025",
-      "category": "html",
-      "image": ["/imgProjects/Italian_Cuisine.jpg"],
-      "preview": ["/imgProjects/Italian_Cuisine-preview.jpg"]
-    },
-    {
-      "id": 3,
-      "title": "Halloween",
-      "caption": "Cutest Pumpkin.",
-      "url": "https://sleiterr.github.io/md-04-js-hallowin/",
-      "github": "https://github.com/sleiterr/md-04-js-hallowin",
-      "role": "UI/UX & Front-end — student project",
-      "date": "29-10-2024",
-      "category": "javascript",
-      "image": ["/imgProjects/halloween.jpg"],
-      "preview": ["/imgProjects/halloween_preview.jpg"]
-    },
-    {
-      "id": 4,
-      "title": "Image Search.",
-      "caption": "A responsive front-end application for searching and viewing images using the Pixabay API. Implemented live search, image gallery with pagination, and interactive notifications for a smooth user experience.",
-      "url": "https://sleiterr.github.io/goit-js-hw-12/",
-      "github": "https://github.com/sleiterr/goit-js-hw-12",
-      "role": "Front-end development with JavaScript, API integration using Axios, async/await for HTTP requests.",
-      "date": "31-05-2024",
-      "category": "javascript",
-      "image": ["/imgProjects/search_box.gif"],
-      "preview": ["/imgProjects/searchBx_view.gif"]
-    },
-    {
-      "id": 5,
-      "title": "To Do List.",
-      "caption": "A simple and effective way to manage your tasks.",
-      "url": "https://sleiterr.github.io/md-01-js-checklist/",
-      "github": "https://github.com/sleiterr/md-01-js-checklist",
-      "role": "JavaScript development UI/UX design",
-      "date": "29-01-2025",
-      "category": "javascript",
-      "image": ["/imgProjects/to_do_list.jpg"],
-      "preview": ["/imgProjects/to_do_list-preview.jpg"]
-    },
-    {
-      "id": 6,
-      "title": "Web Shop.",
-      "caption": "A modern e-commerce platform for all your shopping needs.",
-      "url": "https://md-react-semester-project.vercel.app/",
-      "github": "https://github.com/sleiterr/md-react-semester-project",
-      "role": "Solo project — UI/UX design & React development",
-      "date": "13-06-2025",
-      "category": "react",
-      "image": ["/imgProjects/web_shop.jpg"],
-      "preview": ["/imgProjects/web_shop-preview.jpg"]
-    },
-    {
-      "id": 7,
-      "title": "Gites Glamping.",
-      "caption": "A mobile-first full-stack web application for a glamping business, featuring stays, activities, guest reviews, and booking inquiries powered by a custom API.",
-      "url": "https://md-glamping-semestr-project.vercel.app/",
-      "github": "https://github.com/sleiterr/md-glamping_semestrProject",
-      "role": "Full Stack Developer",
-      "date": "03-11-2025",
-      "category": "react",
-      "image": ["/imgProjects/gites-glamping.gif"],
-      "preview": ["/imgProjects/gites-glamping-preview.gif"]
-    },
-    {
-      "id": 8,
-      "title": "Frontend Practice: Military Drone Website.",
-      "caption": "Future-Frontend project about military drones in the context of the war in Ukraine. Brutal black-and-white design with a pencil-drawn effect",
-      "url": "https://sleiterr.github.io/md_droner/",
-      "github": "https://github.com/sleiterr/md_droner",
-      "role": "Research, UI/UX design, and front-end web development",
-      "date": "18-09-2025",
-      "category": "html",
-      "image": ["/imgProjects/drones.jpg"],
-      "preview": ["/imgProjects/drones_preview.jpg"]
-    },
-    {
-      "id": 9,
       "title": "Klog Energi.",
-      "caption": "Full-stack practice: improving skills in Next.js and Tailwind CSS, working with routing and client components.",
+      "caption": "Full-stack practice: improving Next.js and Tailwind CSS skills with routing, components, and interactive UI.",
       "url": "https://klog-energi.vercel.app/",
       "github": "https://github.com/sleiterr/klog-energi",
-      "role": "Frontend development with Next.js and Tailwind CSS",
       "date": "08-08-2025",
-      "category": "Next.js",
+      "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       "image": ["/imgProjects/Klog_Energi.jpg"],
       "preview": ["/imgProjects/Klog_Energi-preview.jpg"]
     },
     {
-      "id": 10,
-      "title": "Tru Scape.",
-      "caption": "A Next.js CRM admin dashboard for managing companies and business data with searchable tables, interactive navigation, and responsive interfaces.",
-      "url": "https://crm-companies-one.vercel.app/",
-      "github": "https://github.com/sleiterr/CRM_companies",
-      "role": "Frontend Developer (Next.js, TypeScript, Tailwind CSS)",
-      "date": "05-07-2025",
-      "category": "Next.js",
-      "image": ["/imgProjects/tru_scape.gif"],
-      "preview": ["/imgProjects/tru_scape-preview.gif"]
+      "id": 2,
+      "title": "Pizza Hut.",
+      "caption": "Full-stack monorepo: building a Next.js customer app with a Sanity Studio CMS, including cart, checkout, reservations, and content workflows.",
+      "url": "https://pizza-hut-web.vercel.app/",
+      "github": "https://github.com/sleiterr/pizza_hut",
+      "date": "11-10-2026",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Sanity Studio",
+        "Supabase",
+        "Resend",
+        "pnpm Workspaces"
+      ],
+      "image": ["/imgProjects/pizza_hut.jpg"],
+      "preview": ["/imgProjects/pizza_hut-preview.jpg"]
+    },
+    {
+      "id": 3,
+      "title": "TeamsDash.",
+      "caption": "Custom dashboard project for team planning and scheduling, featuring a tailored calendar UI, employee management, and Supabase-powered auth and data flow.",
+      "url": "https://dash-board-noerredal.vercel.app/",
+      "github": "https://github.com/sleiterr/dash_board_noerredal",
+      "date": "01-01-2025",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "Schedule-X",
+        "shadcn/ui"
+      ],
+      "image": ["/imgProjects/TeamsDash.jpg"],
+      "preview": ["/imgProjects/TeamsDash-preview.jpg"]
     }
   ]
 }

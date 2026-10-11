@@ -18,7 +18,7 @@ const PostContent = ({ postData = [] }) => {
             <p className="text-quaternary text-base md:text-lg leading-[1.85] mb-5">
               {item.description}
             </p>
-            <p className="text-quaternary text-base md:text-lg leading-[1.85] mb-5">
+            <p className="text-quaternary text-base md:text-lg leading-[1.85]">
               {item.highlight}
             </p>
           </div>

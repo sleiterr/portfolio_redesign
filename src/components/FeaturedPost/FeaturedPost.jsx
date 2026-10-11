@@ -2,6 +2,11 @@ import Section from "../../components/Section/Section";
 import GradientLabel from "../animation/GradientLabel";
 import PostContent from "./PostContent";
 import Mockupsc from "./Mockupsc";
+import TechBadges from "./TechBadges";
+import CtaLinkButton from "../Button/CtaLinkButton";
+import { FiGithub } from "react-icons/fi";
+import clsx from "clsx";
+
 import { useFeaturedPost } from "./usePost";
 
 const FeaturedPost = () => {
@@ -20,9 +25,25 @@ const FeaturedPost = () => {
       <GradientLabel className="lg:text-base! tracking-wide! mb-10 md:mb-14 uppercase">
         Featured Case Study
       </GradientLabel>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-8">
         <PostContent postData={postData} />
         <Mockupsc images={post.images} />
+      </div>
+      <div className="">
+        <TechBadges techStack={post.techStack} />
+        <CtaLinkButton
+          href="https://github.com/sleiterr/Weather_App"
+          className={clsx(
+            "flex items-center gap-2",
+            "font-medium! text-sm! text-secondary",
+            "px-6! py-3! rounded-md!",
+            "border border-white/25",
+            "hover:border-[#22c3df] hover:text-[#22c3df]",
+          )}
+        >
+          <FiGithub className="w-4 h-4" />
+          View GitHub
+        </CtaLinkButton>
       </div>
     </Section>
   );

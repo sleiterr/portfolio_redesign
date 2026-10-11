@@ -93,10 +93,9 @@ const HeroSection = () => {
                 href="#"
                 className={clsx(
                   "flex items-center gap-2",
-                  "border border-white/25 text-white",
-                  "font-['Poppins',sans-serif] font-medium",
+                  "text-sm! text-secondary",
+                  "border border-white/25",
                   "hover:border-[#22c3df] hover:text-[#22c3df]",
-                  "text-sm sm:text-base",
                 )}
               >
                 <FiGithub className="w-4 h-4" />
