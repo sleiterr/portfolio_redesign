@@ -21,7 +21,7 @@ const FeaturedPost = () => {
   if (!post) return null;
 
   return (
-    <Section>
+    <Section id="blog">
       <GradientLabel className="lg:text-base! tracking-wide! mb-10 md:mb-14 uppercase">
         Featured Case Study
       </GradientLabel>

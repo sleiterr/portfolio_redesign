@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { to: "/#skills", label: "Skills" },
   { to: "/#portfolio", label: "Portfolio" },
   { to: "/#experience", label: "Experience" },
-  { to: "/blog", label: "Blog", hidenOn: "/blog" },
+  { to: "/#blog", label: "Blog" },
 ];
 
 const NavMenu = ({
@@ -17,7 +17,6 @@ const NavMenu = ({
   scrolled = false,
 }) => {
   const location = useLocation();
-  const isBlogPage = location.pathname === "/blog";
   // Determine if the current variant is desktop or mobile
   const isDesktop = variant === "desktop";
 

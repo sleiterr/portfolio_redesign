@@ -1,3 +1,4 @@
+//! API utility functions for fetching data
 const fetchExperienceData = async () => {
   const res = await fetch("/data/experienceData.json");
   if (!res.ok) throw new Error("Error fetching Experience Data");
@@ -7,6 +8,7 @@ const fetchExperienceData = async () => {
 
 export { fetchExperienceData };
 
+//! API utility functions for fetching data
 const fetchEducationData = async () => {
   const res = await fetch("/data/educationData.json");
   if (!res.ok) throw new Error("Error fetching Education Data");
@@ -16,7 +18,7 @@ const fetchEducationData = async () => {
 
 export { fetchEducationData };
 
-// Fetch Featured Post Data
+//! API utility functions for fetching data
 const fetchFeaturedPostData = async () => {
   const res = await fetch("/data/featuredPost.json");
   if (!res.ok) throw new Error("Error fetching Post Data");
@@ -26,11 +28,11 @@ const fetchFeaturedPostData = async () => {
 
 export { fetchFeaturedPostData };
 
-const fetchBlogData = async () => {
-  const res = await fetch("/data/blogData.json");
-  if (!res.ok) throw new Error("Error fetching Blog Data");
+const fetchProjectData = async () => {
+  const res = await fetch("/data/projectsData.json");
+  if (!res.ok) throw new Error("Error fetching Project Data");
   const data = await res.json();
-  return data.dataBlog || [];
+  return data.projectsData || [];
 };
 
-export { fetchBlogData };
+export { fetchProjectData };

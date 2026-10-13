@@ -1,23 +1,25 @@
 {
-  "projects": [
+  "projectsData": [
     {
       "id": 1,
-      "title": "Klog Energi.",
+      "title": "Klog Energi",
       "caption": "Full-stack practice: improving Next.js and Tailwind CSS skills with routing, components, and interactive UI.",
       "url": "https://klog-energi.vercel.app/",
       "github": "https://github.com/sleiterr/klog-energi",
       "date": "08-08-2025",
+      "featured": true,
       "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       "image": ["/imgProjects/Klog_Energi.jpg"],
       "preview": ["/imgProjects/Klog_Energi-preview.jpg"]
     },
     {
       "id": 2,
-      "title": "Pizza Hut.",
+      "title": "Pizza Hut",
       "caption": "Full-stack monorepo: building a Next.js customer app with a Sanity Studio CMS, including cart, checkout, reservations, and content workflows.",
       "url": "https://pizza-hut-web.vercel.app/",
       "github": "https://github.com/sleiterr/pizza_hut",
       "date": "11-10-2026",
+      "featured": false,
       "techStack": [
         "Next.js",
         "React",
@@ -32,11 +34,12 @@
     },
     {
       "id": 3,
-      "title": "TeamsDash.",
+      "title": "TeamsDash",
       "caption": "Custom dashboard project for team planning and scheduling, featuring a tailored calendar UI, employee management, and Supabase-powered auth and data flow.",
       "url": "https://dash-board-noerredal.vercel.app/",
       "github": "https://github.com/sleiterr/dash_board_noerredal",
       "date": "01-01-2025",
+      "featured": true,
       "techStack": [
         "Next.js",
         "React",
@@ -46,7 +49,7 @@
         "Schedule-X",
         "shadcn/ui"
       ],
-      "image": ["/imgProjects/TeamsDash.jpg"],
+      "image": ["/imgProjects/manage_team.jpg"],
       "preview": ["/imgProjects/TeamsDash-preview.jpg"]
     }
   ]
