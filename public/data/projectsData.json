@@ -7,10 +7,14 @@
       "url": "https://klog-energi.vercel.app/",
       "github": "https://github.com/sleiterr/klog-energi",
       "date": "08-08-2025",
-      "featured": true,
+      "featured": false,
       "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      "image": ["/imgProjects/Klog_Energi.jpg"],
-      "preview": ["/imgProjects/Klog_Energi-preview.jpg"]
+      "image": "/imgProjects/Klog_Energi.jpg",
+      "preview": [
+        "/imgProjects/klog_energi_hero.jpg",
+        "/imgProjects/klog_energi_program.jpg",
+        "/imgProjects/klog_table.jpg"
+      ]
     },
     {
       "id": 2,
@@ -29,8 +33,14 @@
         "Resend",
         "pnpm Workspaces"
       ],
-      "image": ["/imgProjects/pizza_hut.jpg"],
-      "preview": ["/imgProjects/pizza_hut-preview.jpg"]
+      "image": "/imgProjects/pizza_hut_view.jpg",
+      "preview": [
+        "/imgProjects/pizza_hut_hero.jpg",
+        "/imgProjects/pizza_hut_form.jpg",
+        "/imgProjects/pizza_hutt_contact_form.jpg",
+        "/imgProjects/pizza_hut_cart.jpg",
+        "/imgProjects/pizza_hut_cart_form.jpg"
+      ]
     },
     {
       "id": 3,
@@ -49,8 +59,14 @@
         "Schedule-X",
         "shadcn/ui"
       ],
-      "image": ["/imgProjects/manage_team.jpg"],
-      "preview": ["/imgProjects/TeamsDash-preview.jpg"]
+      "image": "/imgProjects/manage_team.jpg",
+      "preview": [
+        "/imgProjects/login_page_calendar.jpg",
+        "/imgProjects/monthly_calendar_dashboard.jpg",
+        "/imgProjects/calendar_dashboard_teams.jpg",
+        "/imgProjects/new_person_dashboard_modal.jpg",
+        "/imgProjects/weekly_calendar_dashboard.jpg"
+      ]
     },
     {
       "id": 4,
@@ -59,7 +75,7 @@
       "url": "https://crm-companies-one.vercel.app/",
       "github": "https://github.com/sleiterr/CRM_companies",
       "date": "05-07-2025",
-      "featured": true,
+      "featured": false,
       "techStack": [
         "Next.js 15",
         "React 19",
@@ -69,8 +85,12 @@
         "Headless UI",
         "MockAPI"
       ],
-      "image": ["/imgProjects/crm_dashboard.jpg"],
-      "preview": ["/imgProjects/crm_dashboard-preview.jpg"]
+      "image": "/imgProjects/crm_dashboard.jpg",
+      "preview": [
+        "/imgProjects/tru_scape.jpg",
+        "/imgProjects/crm_companies.jpg",
+        "/imgProjects/crm_modal.jpg"
+      ]
     }
   ]
 }

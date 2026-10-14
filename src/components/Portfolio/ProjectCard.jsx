@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Modal from "../ui/Modal";
 import ProjectThumbnail from "./ProjectThumbnail";
+import ProjectModalContent from "./ProjectModalContent";
 
 const ProjectCard = ({ project }) => {
   const [open, setOpen] = useState(false);
@@ -16,8 +17,12 @@ const ProjectCard = ({ project }) => {
       >
         <ProjectThumbnail project={project} />
       </div>
-      <Modal show={open} classDialogPanel="sm:max-w-4xl">
-        <button onClick={() => setOpen(false)}>Close</button>
+      <Modal
+        show={open}
+        onClose={() => setOpen(false)}
+        classDialogPanel="sm:max-w-4xl"
+      >
+        <ProjectModalContent project={project} onClose={() => setOpen(false)} />
       </Modal>
     </>
   );

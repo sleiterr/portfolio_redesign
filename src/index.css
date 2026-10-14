@@ -32,6 +32,7 @@ html {
   --color-quinary: rgb(30 209 168 / 0.6);
   --color-senary: rgb(30 209 168 / 0.8);
   --color-septenary: rgb(255 255 255 / 0.40);
+  --color-octonary: rgb(255 255 255 / 0.50);
   /* --color-heading-accent: #22c3df; */
 
   /** Header */
@@ -58,4 +59,24 @@ html {
 
 .bg-burger {
   background-color: var(--bg-burger);
+}
+
+/* Styled scrollbar is always visible, unlike macOS overlay scrollbars */
+.modal-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgb(255 255 255 / 0.08);
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: #22c3df;
+  border-radius: 9999px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .modal-scroll {
+    scrollbar-color: #22c3df rgb(255 255 255 / 0.08);
+  }
 }

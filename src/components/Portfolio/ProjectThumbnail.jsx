@@ -6,7 +6,7 @@ const ProjectThumbnail = ({ project }) => {
     <div className="flex flex-col">
       <div className="relative h-64 overflow-hidden">
         <img
-          src={project.image[0]}
+          src={project.image}
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
