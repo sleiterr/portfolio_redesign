@@ -51,6 +51,26 @@
       ],
       "image": ["/imgProjects/manage_team.jpg"],
       "preview": ["/imgProjects/TeamsDash-preview.jpg"]
+    },
+    {
+      "id": 4,
+      "title": "CRM Admin Dashboard",
+      "caption": "A learning CRM admin dashboard with parallel views for summary stats, sales, categories, countries, and promotions, plus a company list and add-company form. Dashboard data is fetched from MockAPI.",
+      "url": "https://crm-companies-one.vercel.app/",
+      "github": "https://github.com/sleiterr/CRM_companies",
+      "date": "05-07-2025",
+      "featured": true,
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Formik",
+        "Headless UI",
+        "MockAPI"
+      ],
+      "image": ["/imgProjects/crm_dashboard.jpg"],
+      "preview": ["/imgProjects/crm_dashboard-preview.jpg"]
     }
   ]
 }

@@ -31,7 +31,7 @@ const ProjectThumbnail = ({ project }) => {
           </div>
         </div>
       </div>
-      <TechStack title={project.title} items={project.techStack} limit={3} />
+      <TechStack title={project.title} items={project.techStack} limit={4} />
     </div>
   );
 };

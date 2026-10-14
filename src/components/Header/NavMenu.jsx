@@ -7,8 +7,8 @@ const NAV_LINKS = [
   { to: "/#about", label: "About" },
   { to: "/#skills", label: "Skills" },
   { to: "/#portfolio", label: "Portfolio" },
-  { to: "/#experience", label: "Experience" },
   { to: "/#blog", label: "Blog" },
+  { to: "/#experience", label: "Experience" },
 ];
 
 const NavMenu = ({
