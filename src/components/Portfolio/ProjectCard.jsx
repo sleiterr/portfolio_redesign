@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Modal from "../ui/Modal";
 import ProjectThumbnail from "./ProjectThumbnail";
 import ProjectModalContent from "./ProjectModalContent";
 
 const ProjectCard = ({ project }) => {
   const [open, setOpen] = useState(false);
+  const preloaded = useRef(false);
+
+  // Warm the browser cache so the modal screenshots are ready when it opens
+  const preloadPreview = () => {
+    if (preloaded.current) return;
+    preloaded.current = true;
+    project.preview.forEach((src) => {
+      new Image().src = src;
+    });
+  };
 
   return (
     <>
@@ -12,6 +22,8 @@ const ProjectCard = ({ project }) => {
         role="button"
         tabindex={0}
         onClick={() => setOpen(true)}
+        onMouseEnter={preloadPreview}
+        onFocus={preloadPreview}
         onKeyDown={(e) => e.key === "Enter" && setOpen(true)}
         className="group cursor-pointer rounded-2xl overflow-hidden border border-white/10 hover:border-[#22c3df]/50 transition-all duration-300 bg-white/[0.03] flex flex-col"
       >

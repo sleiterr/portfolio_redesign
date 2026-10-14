@@ -46,7 +46,7 @@ const ProjectModalContent = ({ project, onClose }) => {
           key={shot}
           src={shot}
           alt={`${project.title} screenshot ${index + 1}`}
-          className="w-full rounded-xl border border-white/10"
+          className="w-full min-h-40 rounded-xl border border-white/10 bg-white/[0.04]"
         />
       ))}
     </div>
