@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroSection from "../../components/Hero/HeroSection";
 import About from "../../components/About/About";
 import Skills from "../../components/Skills/Skills";
@@ -8,16 +8,8 @@ import Skillslop from "../../components/Skillslop/SkillTicker";
 import FeaturedPost from "../../components/FeaturedPost/FeaturedPost";
 
 import { techLogos } from "../../utils/techLogos";
-// import {
-//   SiReact,
-//   SiNextdotjs,
-//   SiTypescript,
-//   SiTailwindcss,
-// } from "react-icons/si";
 
 const Home = () => {
-  const [currentPage, setCurrentpage] = useState(1);
-  // Hook to reference the hero section for potential future use (e.g., scrolling, animations)
   const heroRef = React.useRef(null);
 
   return (
@@ -40,7 +32,7 @@ const Home = () => {
       </div>
       <About />
       <Skills />
-      <Portfolio currentPage={currentPage} setCurrentpage={setCurrentpage} />
+      <Portfolio />
       <FeaturedPost />
       <Experience />
     </>

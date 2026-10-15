@@ -38,14 +38,18 @@
         "/imgProjects/pizza_hut_hero.jpg",
         "/imgProjects/pizza_hut_form.jpg",
         "/imgProjects/pizza_hutt_contact_form.jpg",
+        "/imgProjects/pizza_featured_dishes.jpg",
         "/imgProjects/pizza_hut_cart.jpg",
-        "/imgProjects/pizza_hut_cart_form.jpg"
+        "/imgProjects/pizza_hut_cart_form.jpg",
+        "/imgProjects/pizza_studio_1.jpg",
+        "/imgProjects/pizza_studio_2.jpg",
+        "/imgProjects/pizza_studio_3.jpg"
       ]
     },
     {
       "id": 3,
       "title": "TeamsDash",
-      "caption": "Custom dashboard project for team planning and scheduling, featuring a tailored calendar UI, employee management, and Supabase-powered auth and data flow.",
+      "caption": "Custom dashboard project for team planning and scheduling, featuring a tailored calendar UI, employee management, and Supabase-powered auth and data flow. See README for demo login.",
       "url": "https://dash-board-noerredal.vercel.app/",
       "github": "https://github.com/sleiterr/dash_board_noerredal",
       "date": "01-01-2025",
@@ -63,9 +67,11 @@
       "preview": [
         "/imgProjects/login_page_calendar.jpg",
         "/imgProjects/monthly_calendar_dashboard.jpg",
+        "/imgProjects/weekly_calendar_dashboard.jpg",
+        "/imgProjects/daily_calendar_dashboard.jpg",
+        "/imgProjects/add_new_event_dashboard_modal.jpg",
         "/imgProjects/calendar_dashboard_teams.jpg",
-        "/imgProjects/new_person_dashboard_modal.jpg",
-        "/imgProjects/weekly_calendar_dashboard.jpg"
+        "/imgProjects/new_person_dashboard_modal.jpg"
       ]
     },
     {

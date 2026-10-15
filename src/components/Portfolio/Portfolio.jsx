@@ -1,25 +1,44 @@
+import { useState } from "react";
 import clsx from "clsx";
 import SplitText from "../animation/SplitText";
 import { GradientLabel } from "../animation/GradientLabel";
+import { AnimatePresence, motion as Motion } from "motion/react";
+import PortfolioPagination from "./PortfolioPagination";
 
 import Section from "../Section/Section";
 import ProjectCard from "./ProjectCard";
 import { useFeaturedProject } from "./useProject";
+import { containerVariants, cardVariants } from "../animation/cardVariants";
 
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
 
+const PAGE_SIZE = 3;
+
 const Portfolio = () => {
   const { projectData, loading, error } = useFeaturedProject();
+  const [currentPage, setCurrentPage] = useState(1);
+  // 1 = next page (cards slide in from the right), -1 = previous page
+  const [direction, setDirection] = useState(1);
+
+  const handlePageChange = (page) => {
+    if (page === currentPage) return;
+    setDirection(page > currentPage ? 1 : -1);
+    setCurrentPage(page);
+  };
 
   if (loading) return null;
 
   if (error)
     return <p className="font-normal text-2xl text-red-500">{error}</p>;
 
-  const post = projectData[0];
-  if (!post) return null;
+  if (projectData.length === 0) return null;
+
+  // Calculate pagination details
+  const totalPage = Math.ceil(projectData.length / PAGE_SIZE);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageItems = projectData.slice(start, start + PAGE_SIZE);
 
   return (
     <Section
@@ -54,11 +73,32 @@ const Portfolio = () => {
             </span>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {projectData.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        <AnimatePresence mode="wait" custom={direction}>
+          <Motion.div
+            key={`${currentPage}`}
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            custom={direction}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          >
+            {pageItems.map((project) => (
+              <Motion.div
+                key={project.id}
+                variants={cardVariants}
+                custom={direction}
+              >
+                <ProjectCard project={project} />
+              </Motion.div>
+            ))}
+          </Motion.div>
+        </AnimatePresence>
+        <PortfolioPagination
+          currentPage={currentPage}
+          totalPage={totalPage}
+          onPageChange={handlePageChange}
+        />
       </div>
     </Section>
   );

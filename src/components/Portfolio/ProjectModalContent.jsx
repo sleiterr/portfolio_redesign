@@ -4,7 +4,7 @@ import { FiGithub } from "react-icons/fi";
 
 const ProjectModalContent = ({ project, onClose }) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
       {/* Header */}
       <div className="flex shrink-0 items-start gap-3">
         <div className="min-w-0">

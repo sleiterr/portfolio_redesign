@@ -90,7 +90,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <ProjectsLinks />
               <CtaLinkButton
-                href="#"
+                href="https://github.com/sleiterr"
                 className={clsx(
                   "flex items-center gap-2",
                   "text-sm! text-secondary",

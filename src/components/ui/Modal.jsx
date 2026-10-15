@@ -22,7 +22,7 @@ export function Modal({ show, children, onClose, classDialogPanel }) {
         </TransitionChild>
 
         <div className="modal-scroll fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-3 sm:p-6">
+          <div className="flex min-h-full items-center justify-center p-3 sm:p-12">
             <DialogPanel
               className={clsx(
                 "relative mx-auto w-full overflow-hidden shadow-xl",

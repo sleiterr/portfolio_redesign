@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
-
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
@@ -46,6 +44,10 @@ html {
   --color-border-burger: #3e3e3e;
 
   --default-nav: #fff;
+
+  /** Pagination_Dot  */
+  --color-dot-active: #1ed1a8;
+  --color-dot-inactive: #B5B5B5;
 
   --color-accordion: #fff;
   --accordion-text-default: #000;
