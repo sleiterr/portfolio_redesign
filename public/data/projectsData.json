@@ -9,11 +9,11 @@
       "date": "08-08-2025",
       "featured": false,
       "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      "image": "/imgProjects/Klog_Energi.jpg",
+      "image": "/imgProjects/Klog_Energi.webp",
       "preview": [
-        "/imgProjects/klog_energi_hero.jpg",
-        "/imgProjects/klog_energi_program.jpg",
-        "/imgProjects/klog_table.jpg"
+        "/imgProjects/klog_energi_hero.webp",
+        "/imgProjects/klog_energi_program.webp",
+        "/imgProjects/klog_table.webp"
       ]
     },
     {
@@ -33,17 +33,17 @@
         "Resend",
         "pnpm Workspaces"
       ],
-      "image": "/imgProjects/pizza_hut_view.jpg",
+      "image": "/imgProjects/pizza_hut_view.webp",
       "preview": [
-        "/imgProjects/pizza_hut_hero.jpg",
-        "/imgProjects/pizza_hut_form.jpg",
-        "/imgProjects/pizza_hutt_contact_form.jpg",
-        "/imgProjects/pizza_featured_dishes.jpg",
-        "/imgProjects/pizza_hut_cart.jpg",
-        "/imgProjects/pizza_hut_cart_form.jpg",
-        "/imgProjects/pizza_studio_1.jpg",
-        "/imgProjects/pizza_studio_2.jpg",
-        "/imgProjects/pizza_studio_3.jpg"
+        "/imgProjects/pizza_hut_hero.webp",
+        "/imgProjects/pizza_hut_form.webp",
+        "/imgProjects/pizza_hutt_contact_form.webp",
+        "/imgProjects/pizza_featured_dishes.webp",
+        "/imgProjects/pizza_hut_cart.webp",
+        "/imgProjects/pizza_hut_cart_form.webp",
+        "/imgProjects/pizza_studio_1.webp",
+        "/imgProjects/pizza_studio_2.webp",
+        "/imgProjects/pizza_studio_3.webp"
       ]
     },
     {
@@ -63,15 +63,16 @@
         "Schedule-X",
         "shadcn/ui"
       ],
-      "image": "/imgProjects/manage_team.jpg",
+      "image": "/imgProjects/manage_team.webp",
       "preview": [
-        "/imgProjects/login_page_calendar.jpg",
-        "/imgProjects/monthly_calendar_dashboard.jpg",
-        "/imgProjects/weekly_calendar_dashboard.jpg",
-        "/imgProjects/daily_calendar_dashboard.jpg",
-        "/imgProjects/add_new_event_dashboard_modal.jpg",
-        "/imgProjects/calendar_dashboard_teams.jpg",
-        "/imgProjects/new_person_dashboard_modal.jpg"
+        "/imgProjects/team_dash_view.webp",
+        "/imgProjects/login_page_calendar.webp",
+        "/imgProjects/monthly_calendar_dashboard.webp",
+        "/imgProjects/weekly_calendar_dashboard.webp",
+        "/imgProjects/daily_calendar_dashboard.webp",
+        "/imgProjects/add_new_event_dashboard_modal.webp",
+        "/imgProjects/calendar_dashboard_teams.webp",
+        "/imgProjects/new_person_dashboard_modal.webp"
       ]
     },
     {
@@ -91,11 +92,11 @@
         "Headless UI",
         "MockAPI"
       ],
-      "image": "/imgProjects/crm_dashboard.jpg",
+      "image": "/imgProjects/crm_dashboard.webp",
       "preview": [
-        "/imgProjects/tru_scape.jpg",
-        "/imgProjects/crm_companies.jpg",
-        "/imgProjects/crm_modal.jpg"
+        "/imgProjects/tru_scape.webp",
+        "/imgProjects/crm_companies.webp",
+        "/imgProjects/crm_modal.webp"
       ]
     }
   ]

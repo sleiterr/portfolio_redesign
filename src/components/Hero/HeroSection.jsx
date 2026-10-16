@@ -1,4 +1,4 @@
-import heroBg from "../../assets/img/hero_img.jpg";
+import heroBg from "../../assets/img/hero-design_1.jpg";
 import clsx from "clsx";
 import { ProjectsLinks } from "./ProjectsLinks";
 import CtaLinkButton from "../Button/CtaLinkButton";
@@ -51,7 +51,7 @@ const HeroSection = () => {
             "top-[6rem] left-6",
             "sm:top-4 sm:left-12",
             "md:top-1/6 md:left-12",
-            "lg:top-1/3 lg:left-10",
+            "lg:top-[40%] lg:left-10",
           )}
         >
           <div className="flex flex-col items-start justify-center text-left gap-4 px-4 md:px-0">
