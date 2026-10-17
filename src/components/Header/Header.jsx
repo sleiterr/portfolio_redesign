@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { useScroll, useMotionValueEvent } from "framer-motion";
+import { scroller } from "react-scroll";
 
 import { whiteLogo, blackLogo } from "../../assets/logo/index";
 import { GoCommandPalette } from "react-icons/go";
@@ -22,6 +23,19 @@ const Header = () => {
 
   const { scrollY } = useScroll();
   const handleLinkClick = () => setMenuOpen(false);
+
+  // On Home the route does not change, so scroll to the hero instead
+  const handleLogoClick = (event) => {
+    if (!isHome) return;
+    event.preventDefault();
+    scroller.scrollTo("hero", { smooth: true, duration: 400 });
+
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
+  };
 
   useEffect(() => {
     if (!isHome) {
@@ -82,7 +96,7 @@ const Header = () => {
         ></div>
         <nav className={clsx(navBarClasses)}>
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
-            <Link to="/">
+            <Link onClick={handleLogoClick} to="/">
               {!scrolled ? (
                 <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (
@@ -93,11 +107,7 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none">
             <div className="pointer-events-auto">
-              <NavMenu
-                handleLinkClick={handleLinkClick}
-                variant="desktop"
-                scrolled={scrolled}
-              />
+              <NavMenu handleLinkClick={handleLinkClick} variant="desktop" />
             </div>
           </div>
           <DownloadCta />

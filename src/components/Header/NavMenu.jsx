@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 
 // Navigation links for the header menu
@@ -11,12 +11,7 @@ const NAV_LINKS = [
   { to: "/#experience", label: "Experience" },
 ];
 
-const NavMenu = ({
-  handleLinkClick,
-  variant = "desktop",
-  scrolled = false,
-}) => {
-  const location = useLocation();
+const NavMenu = ({ handleLinkClick, variant = "desktop" }) => {
   // Determine if the current variant is desktop or mobile
   const isDesktop = variant === "desktop";
 
@@ -34,27 +29,21 @@ const NavMenu = ({
 
   // Define text size based on the variant (desktop or mobile)
   const textSize = isDesktop ? "text-base xl:text-lg" : "text-3xl";
-  const textColor = !isDesktop
-    ? "text-nav"
-    : scrolled
-      ? "text-white"
-      : "text-white";
+  const textColor = isDesktop ? "text-white" : "text-nav";
 
   return (
     <ul className={ulClasses}>
-      {NAV_LINKS.filter((link) => link.hidenOn !== location.pathname).map(
-        (link) => (
-          <li key={link.to}>
-            <Link
-              to={link.to}
-              className={clsx(linkBase, textSize, textColor)}
-              onClick={handleLinkClick}
-            >
-              {link.label}
-            </Link>
-          </li>
-        ),
-      )}
+      {NAV_LINKS.map((link) => (
+        <li key={link.to}>
+          <Link
+            to={link.to}
+            className={clsx(linkBase, textSize, textColor)}
+            onClick={handleLinkClick}
+          >
+            {link.label}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };

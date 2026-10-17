@@ -11,8 +11,13 @@ const LogoLink = ({ scrollTarget = "hero" }) => {
     if (location.pathname === "/") {
       scroller.scrollTo(scrollTarget, {
         smooth: true,
-        duration: 800,
+        duration: 400,
       });
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search,
+      );
     } else {
       navigate("/");
     }

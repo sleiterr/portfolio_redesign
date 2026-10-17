@@ -68,7 +68,7 @@ const ScrollToHash = () => {
       // Clear all pending timeouts when the component unmounts to prevent memory leaks and unintended behavior if the user navigates away before the scrolling is complete
       timers.forEach((id) => window.clearTimeout(id));
     };
-  }, [location.pathname, location.hash]);
+  }, [location.pathname, location.hash, location.key]);
 
   return null;
 };
