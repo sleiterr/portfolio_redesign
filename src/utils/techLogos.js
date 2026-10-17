@@ -14,6 +14,8 @@ import {
   figma,
   ph,
   ai,
+  ts,
+  nextjs,
 } from "../assets/iconExports/index.js";
 
 export const techLogos = [
@@ -114,5 +116,19 @@ export const techLogos = [
     category: "ui-ux",
     title: "illustrator",
     href: "https://www.adobe.com/products/illustrator.html",
+  },
+  {
+    id: 15,
+    src: ts,
+    category: "Frontend",
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+  },
+  {
+    id: 16,
+    src: nextjs,
+    category: "Frontend",
+    title: "Next.js",
+    href: "https://nextjs.org/",
   },
 ];

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import SplitText from "../animation/SplitText";
 import { GradientLabel } from "../animation/GradientLabel";
@@ -9,18 +9,25 @@ import Section from "../Section/Section";
 import ProjectCard from "./ProjectCard";
 import { useFeaturedProject } from "./useProject";
 import { containerVariants, cardVariants } from "../animation/cardVariants";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
 
-const PAGE_SIZE = 3;
-
 const Portfolio = () => {
+  const isMd = useMediaQuery("(min-width: 786px)");
+  const pageSize = isMd ? 3 : 1;
+
   const { projectData, loading, error } = useFeaturedProject();
   const [currentPage, setCurrentPage] = useState(1);
   // 1 = next page (cards slide in from the right), -1 = previous page
   const [direction, setDirection] = useState(1);
+
+  // useEffect to reset current page when pageSize changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [pageSize]);
 
   const handlePageChange = (page) => {
     if (page === currentPage) return;
@@ -36,26 +43,26 @@ const Portfolio = () => {
   if (projectData.length === 0) return null;
 
   // Calculate pagination details
-  const totalPage = Math.ceil(projectData.length / PAGE_SIZE);
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const pageItems = projectData.slice(start, start + PAGE_SIZE);
+  const totalPage = Math.ceil(projectData.length / pageSize);
+  const start = (currentPage - 1) * pageSize;
+  const pageItems = projectData.slice(start, start + pageSize);
 
   return (
     <Section
       id="portfolio"
-      className="hidden md:block bg-portfolio-transition md:max-w-none! py-0!"
+      className="bg-portfolio-transition md:max-w-none! py-0!"
     >
       <div className="px-4 py-[3.7rem] md:py-[12rem] mx-auto md:max-w-7xl">
         <div className="relative mb-8 md:mb-12">
           <GradientLabel className="lg:text-base! tracking-wide! mb-3 uppercase">
             My Projects
           </GradientLabel>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div className="flex flex-col items-start sm:flex-row sm:items-end justify-between gap-3">
             <SplitText
               tag="h2"
               text="Selected Work"
               className={clsx(
-                "font-code font-bold text-2xl md:text-3xl text-primary",
+                "font-code font-bold text-3xl md:text-4xl text-primary",
               )}
               delay={100}
               duration={0.4}

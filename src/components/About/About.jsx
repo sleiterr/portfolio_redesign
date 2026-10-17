@@ -22,7 +22,7 @@ function About() {
         <SplitText
           tag="h2"
           text="Who I Am"
-          className="font-code font-bold md:text-4xl text-primary tracking-wide mb-10 md:mb-16 w-full"
+          className="font-code font-bold text-3xl md:text-4xl text-primary tracking-wide mb-6 md:mb-16 w-full"
           delay={40}
           duration={0.6}
           ease="power3.out"

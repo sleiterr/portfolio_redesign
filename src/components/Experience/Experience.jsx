@@ -62,7 +62,7 @@ const Experience = () => {
           <SplitText
             tag="h2"
             text="Education &amp; Experience"
-            className="font-code font-bold md:text-4xl text-primary tracking-wide mb-10 md:mb-16 w-full"
+            className="font-code font-bold text-3xl md:text-4xl text-primary tracking-wide mb-12 md:mb-16 w-full"
             delay={40}
             duration={0.6}
             ease="power3.out"
@@ -89,12 +89,9 @@ const Experience = () => {
                 )}
               >
                 <GiGraduateCap
-                  className={clsx(
-                    "lg:w-8 lg:h-8 md:w-10 md:h-10 text-white",
-                    "w-12 h-12",
-                  )}
+                  className={clsx("lg:w-8 lg:h-8 w-10 h-10 text-white")}
                 />
-                <h2 className="font-code font-bold text-primary text-3xl md:text-2xl w-full text-left">
+                <h2 className="font-code font-bold text-primary text-3xl md:text-2xl w-full text-center md:text-left">
                   Education
                 </h2>
               </div>
@@ -108,15 +105,10 @@ const Experience = () => {
                   "mb-6",
                 )}
               >
-                <FaAward
-                  className={clsx(
-                    "lg:w-6 lg:h-6 md:w-10 md:h-10 text-white",
-                    "w-12 h-12",
-                  )}
-                />
+                <FaAward className={clsx("lg:w-6 lg:h-6 w-8 h-8 text-white")} />
                 <h2
                   className={clsx(
-                    "font-code font-semibold text-primary text-3xl md:text-2xl w-full text-left",
+                    "font-code font-semibold text-primary text-3xl md:text-2xl w-full text-center md:text-left",
                   )}
                 >
                   Experience

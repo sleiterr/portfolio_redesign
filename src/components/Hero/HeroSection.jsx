@@ -48,13 +48,13 @@ const HeroSection = () => {
         <div
           className={clsx(
             "absolute z-10 flex items-start justify-center",
-            "top-[6rem] left-6",
+            "top-[40%] left-6",
             "sm:top-4 sm:left-12",
             "md:top-1/6 md:left-12",
             "lg:top-[40%] lg:left-10",
           )}
         >
-          <div className="flex flex-col items-start justify-center text-left gap-4 px-4 md:px-0">
+          <div className="flex flex-col items-start justify-center text-left gap-2 md:gap-4 px-4 md:px-0">
             <GradientLabel className="uppercase text-sm!">
               junior developer
             </GradientLabel>
@@ -113,7 +113,7 @@ export default HeroSection;
 
 const HeroItem = ({ duration }) => {
   return (
-    <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem] mb-8">
+    <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem] mb-4 md:mb-8">
       {heroTextDoc.map((p) => (
         <BlurText as="p" duration={duration} key={p.id} className={p.className}>
           {p.text}

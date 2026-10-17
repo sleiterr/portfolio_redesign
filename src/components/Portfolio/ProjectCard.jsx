@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
     <>
       <div
         role="button"
-        tabindex={0}
+        tabIndex={0}
         onClick={() => setOpen(true)}
         onMouseEnter={preloadPreview}
         onFocus={preloadPreview}

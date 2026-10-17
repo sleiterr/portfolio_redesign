@@ -2,8 +2,8 @@ import React from "react";
 
 const TechBadges = ({ techStack = [] }) => {
   return (
-    <div>
-      <ul className="flex flex-wrap gap-2 mb-8">
+    <>
+      <ul className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-2 mb-8">
         {techStack.map((tech, index) => (
           <li
             key={index}
@@ -13,7 +13,7 @@ const TechBadges = ({ techStack = [] }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

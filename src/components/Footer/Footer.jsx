@@ -12,13 +12,13 @@ const Footer = () => {
     //  border-t border-white
     <footer
       className={clsx(
-        "flex flex-col items-center justify-center bg-footer py-6 md:py-0 lg:py-8 px-8 lg:px-16",
+        "flex flex-col items-center justify-center bg-footer px-4 py-6 md:py-0 lg:py-8 lg:px-16",
       )}
     >
       <div
         className={clsx(
           "flex items-start flex-col gap-8 justify-between w-full",
-          "md:gap-0 md:flex-row md:items-center md:mb-8",
+          "md:gap-0 md:flex-row md:items-center mb-6 md:mb-8",
         )}
       >
         <div className="">
@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <div
         className={clsx(
-          "flex items-center justify-between pt-6",
+          "flex flex-col items-start md:flex-row md:items-center justify-between pt-8 md:pt-6 gap-3 md:gap-0",
           "relative w-full",
           "before:content-[''] before:absolute before:inset-x-0 before:top-1 before:h-[1px] before:bg-white/25 before:-translate-y-1/2",
         )}

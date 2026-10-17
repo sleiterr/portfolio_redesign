@@ -5,7 +5,7 @@ import clsx from "clsx";
 const NAV_LINKS = [
   { to: "/#hero", label: "Home" },
   { to: "/#about", label: "About" },
-  { to: "/#skills", label: "Skills" },
+  { to: "/#skills", label: "Skills", hideBelowMd: true },
   { to: "/#portfolio", label: "Portfolio" },
   { to: "/#blog", label: "Blog" },
   { to: "/#experience", label: "Experience" },
@@ -34,7 +34,10 @@ const NavMenu = ({ handleLinkClick, variant = "desktop" }) => {
   return (
     <ul className={ulClasses}>
       {NAV_LINKS.map((link) => (
-        <li key={link.to}>
+        <li
+          key={link.to}
+          className={clsx(link.hideBelowMd && "hidden md:block")}
+        >
           <Link
             to={link.to}
             className={clsx(linkBase, textSize, textColor)}

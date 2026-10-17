@@ -21,15 +21,15 @@ const FeaturedPost = () => {
   if (!post) return null;
 
   return (
-    <Section id="blog">
+    <Section id="blog" className="px-5 sm:px-6">
       <GradientLabel className="lg:text-base! tracking-wide! mb-10 md:mb-14 uppercase">
         Featured Case Study
       </GradientLabel>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-8">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16 md:mb-8">
         <PostContent postData={postData} />
         <Mockupsc images={post.images} />
       </div>
-      <div className="">
+      <div className="flex flex-wrap md:flex-col md:items-start justify-center md:justify-start gap-6">
         <TechBadges techStack={post.techStack} />
         <CtaLinkButton
           href="https://github.com/sleiterr/Weather_App"

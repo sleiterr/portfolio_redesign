@@ -6,12 +6,12 @@ export const ProjectsLinks = () => {
     <>
       <Link
         to="/#portfolio"
-        className="group relative flex gap-2 font-normal text-base md:text-xl items-center cursor-pointer"
+        className="group relative flex gap-2 font-normal items-center cursor-pointer"
       >
-        <p className="relative font-medium text-2xl md:text-lg text-tertiary m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8] ">
+        <p className="relative font-medium text-base md:text-lg text-tertiary m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8] ">
           View Projects
         </p>
-        <BsArrowLeft className="hidden md:block w-4 h-4 text-tertiary transition-all duration-250 ease-in-out delay-150 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
+        <BsArrowLeft className="w-4 h-4 text-tertiary transition-all duration-250 ease-in-out delay-150 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
       </Link>
     </>
   );
