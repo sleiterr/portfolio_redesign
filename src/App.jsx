@@ -8,6 +8,7 @@ import ScrollToHash from "./components/ScrollToHash/ScrollToHash.jsx";
 import CookieModal from "./components/CookieModal/CookieModal.jsx";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/home/Home";
+import ScrollToTop from "./components/Button/ScrollToTop.jsx";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
