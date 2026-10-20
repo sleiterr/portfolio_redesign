@@ -25,7 +25,7 @@ const ScrollToTop = () => {
       aria-label="Scroll to top"
       className={clsx(
         "group fixed bottom-8 md:bottom-24 right-6 z-[900]",
-        "flex items-center justify-center w-11 h-11 rounded-full overflow-hidden",
+        "flex items-center justify-center w-14 h-14 md:w-11 md:h-11 rounded-full overflow-hidden",
         "bg-white/10 backdrop-blur-sm border border-white/20 text-white",
         "hover:border-brand hover:text-brand cursor-pointer",
         "active:scale-95",
