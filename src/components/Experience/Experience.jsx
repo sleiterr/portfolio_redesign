@@ -76,7 +76,7 @@ const Experience = () => {
           />
           <div
             className={clsx(
-              "grid cols-1 gap-2",
+              "grid cols-1 gap-12",
               "lg:grid-cols-2 lg:gap-12 lg:place-items-start",
               "md:place-items-center md:gap-8",
             )}
