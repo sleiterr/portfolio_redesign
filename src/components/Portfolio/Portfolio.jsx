@@ -15,6 +15,9 @@ const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
 
+// Swipe threshold for pagination
+const SWIPE_THRESHOLD = 50;
+
 const Portfolio = () => {
   const isMd = useMediaQuery("(min-width: 786px)");
   const pageSize = isMd ? 3 : 1;
@@ -46,6 +49,14 @@ const Portfolio = () => {
   const totalPage = Math.ceil(projectData.length / pageSize);
   const start = (currentPage - 1) * pageSize;
   const pageItems = projectData.slice(start, start + pageSize);
+
+  const handleDragEnd = (_, info) => {
+    if (info.offset.x < -SWIPE_THRESHOLD && currentPage < totalPage) {
+      handlePageChange(currentPage + 1); // Swipe to the left
+    } else if (info.offset.x > SWIPE_THRESHOLD && currentPage > 1) {
+      handlePageChange(currentPage - 1); // Swipe to the right
+    }
+  };
 
   return (
     <Section
@@ -88,6 +99,10 @@ const Portfolio = () => {
             animate="show"
             exit="exit"
             custom={direction}
+            drag={!isMd && totalPage > 1 ? "x" : false}
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={handleDragEnd}
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           >
             {pageItems.map((project) => (
